@@ -3,24 +3,94 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
-@media only screen and (min-width: 1024px){
-.sn-grid-template{
-    display: grid;
-    grid-template-areas:
-    "sidebar header header"
-    "sidebar content content"
-    "sidebar footer footer";
-    grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: 50px 3fr 50px;
-    height: 100%;
- }
-
- /*code{
-    font-size: 2rem;
-  }*/
+a{
+    margin-right: 1rem;
+    text-decoration: none;
+    color: #FFF8E1;
 }
 
-@media only screen and (max-width: 1023px){
+
+@media only screen and (min-width:625px) and (orientation : portrait){
+    .sn-grid-template{
+        display: grid;
+        grid-template-areas:
+        "sidebar header header"
+        "sidebar content content"
+        "sidebar footer footer";
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-rows: 50px 3fr 50px;
+        height: 100%;
+     }
+    
+    .sn-header{
+        grid-area: header;
+        background: #9C27B0;
+        text-align: center;
+        height: 100%;
+        
+        display: grid;
+        grid-template-areas:
+         "headerMain"
+         "headerSub";
+         grid-template-rows: 3fr auto;
+    }
+    
+    code{
+       font-size: 1.5rem;
+    }
+    
+
+    .sn-header-main{
+        grid-area: "headerMain"
+        
+        
+    }
+
+    .sn-header-sub{ grid-area: "headerSub"}
+    
+    
+    .sn-sidebar {
+    grid-area: sidebar;
+    background-color: #757575;
+    /*sidebar grid*/
+    display: grid;
+    grid-template-areas: 
+    "sidebarLogo"
+    "sidebarNav";
+    grid-template-rows: 150px 80%;
+    grid-template-columns: 100%;
+    }
+    
+    .sn-main{
+    grid-area: content;
+    overflow: auto;
+    }
+    
+    .sn-footer{
+    grid-area: footer;
+    background: #9C27B0;
+    text-align: center;
+    padding: 0.5rem;
+    color: #FFF8E1;
+    }
+    
+    .sn-sidebar-logo{
+        grid-area: sidebarLogo;
+        height: 100px;
+        width: 80%;
+        padding: 1rem;
+        margin: 0 auto;
+        border:2px solid red;
+    }
+    
+    .sn-sidebar-nav{
+        grid-area: sidebarNav;        
+    }
+    
+}
+
+
+@media only screen and (max-device-width:768px) and (orientation : portrait){
     .sn-grid-template{
         display: grid;
         grid-template-areas:
@@ -29,68 +99,158 @@ body{
         "sidebar sidebar sidebar"
         "footer footer footer";
         grid-template-columns: 1fr 2fr 2fr;
-        grid-template-rows: 100px auto 40px 40px;
+        grid-template-rows: 50px auto 3fr 50px;
         height: 100%;
      }
+    
+    .sn-header{
+        grid-area: header;
+        background: #9C27B0;
+        text-align: center;
+        height: 100%;
+        
+        display: grid;
+        grid-template-areas:
+         "headerMain"
+         "headerSub";
+         grid-template-rows: 3fr auto;
+    }
+    
+    code{
+       font-size: 1.5rem;
+    }
+    
 
-     /*code{
-        font-size: 5rem;
-      }*/
+    .sn-header-main{
+        grid-area: "headerMain"
     }
 
-
-.sn-header{
-    grid-area: header;
+    .sn-header-sub{ grid-area: "headerSub"}
+    
+    
+    .sn-sidebar {
+    grid-area: sidebar;
+    background-color: #757575;
+    /*sidebar grid*/
+    display: grid;
+    grid-template-areas: 
+       "sidebarLogo sidebarNav";
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
+    }
+    
+    .sn-main{
+    grid-area: content;
+    overflow: auto;
+    }
+    
+    .sn-footer{
+    grid-area: footer;
     background: #9C27B0;
     text-align: center;
-    height: 100%;
-}
-
-code{
-
+    padding: 0.5rem;
+    color: #FFF8E1;
+    }
     
-        font-size: 2rem;
-}
-
-    @media only screen and (max-width:625px){
-       code{
-        font-size: 2rem;
-       }
-       
+    .sn-sidebar-logo{
+        grid-area: sidebarLogo;
+        width: 100%;
+        margin: auto 0;
+        border:2px solid red;
+    }
+    
+    .sn-sidebar-nav{
+        grid-area: sidebarNav;  
+        margin: auto auto;      
     }
 
-    @media only screen and (min-width:626px) and (max-width:1023px){
-       code{
-        font-size: 5rem;
-       }
+    .sn-sidebar-nav ul li{
+        display: inline;     
+    }
+
+
+}
+
+
+
+/*Landscape View*/
+@media only screen  and (orientation : landscape){
+
+    .sn-grid-template{
+        display: grid;
+        grid-template-areas:
+        "sidebar header header"
+        "sidebar content content"
+        "sidebar footer footer";
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-rows: 50px 3fr 50px;
+        height: 100%;
+     }
+    
+    .sn-header{
+        grid-area: header;
+        background: #9C27B0;
+        text-align: center;
+        height: 100%;
+        
+        display: grid;
+        grid-template-areas:
+         "headerMain"
+         "headerSub";
+         grid-template-rows: 3fr auto;
+    }
+    
+    code{
+       font-size: 1.5rem;
+    }
+    
+
+    .sn-header-main{
+        grid-area: "headerMain"
+        
         
     }
 
-
+    .sn-header-sub{ grid-area: "headerSub"}
     
-  
-
-  
-nav a{
-    margin: 2rem; 
-    text-decoration: none;
+    
+    .sn-sidebar {
+    grid-area: sidebar;
+    background-color: #757575;
+    /*sidebar grid*/
+    display: grid;
+    grid-template-areas: 
+    "sidebarLogo"
+    "sidebarNav";
+    grid-template-rows: 150px 80%;
+    grid-template-columns: 100%;
+    }
+    
+    .sn-main{
+    grid-area: content;
+    overflow: auto;
+    }
+    
+    .sn-footer{
+    grid-area: footer;
+    background: #9C27B0;
+    text-align: center;
+    padding: 0.5rem;
     color: #FFF8E1;
-}
+    }
+    
+    .sn-sidebar-logo{
+        grid-area: sidebarLogo;
+        height: 100px;
+        width: 80%;
+        padding: 1rem;
+        margin: 0 auto;
+        border:2px solid red;
+    }
+    
+    .sn-sidebar-nav{
+        grid-area: sidebarNav;        
+    }
 
-.sn-sidebar {
-grid-area: sidebar;
-background-color: #757575;
-}
 
-.sn-main{
-grid-area: content;
-overflow: auto;
-}
-
-.sn-footer{
-grid-area: footer;
-background: #9C27B0;
-text-align: center;
-padding: 0.5rem;
-color: #FFF8E1;
 }
