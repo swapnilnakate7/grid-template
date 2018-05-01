@@ -80,7 +80,7 @@ a{
         width: 80%;
         padding: 1rem;
         margin: 0 auto;
-        border:2px solid red;
+       
     }
     
     .sn-sidebar-nav{
@@ -160,7 +160,6 @@ a{
         grid-area: sidebarLogo;
         width: 100%;
         margin: auto 0;
-        border:2px solid red;
     }
     
     .sn-sidebar-nav{
