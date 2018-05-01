@@ -15,9 +15,9 @@ body{
     height: 100%;
  }
 
- code{
+ /*code{
     font-size: 2rem;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 1023px){
@@ -33,9 +33,9 @@ body{
         height: 100%;
      }
 
-     code{
+     /*code{
         font-size: 5rem;
-      }
+      }*/
     }
 
 
@@ -46,7 +46,29 @@ body{
     height: 100%;
 }
 
+code{
 
+    
+        font-size: 2rem;
+}
+
+    @media only screen and (max-width:625px){
+       code{
+        font-size: 2rem;
+       }
+       
+    }
+
+    @media only screen and (min-width:626px) and (max-width:1023px){
+       code{
+        font-size: 5rem;
+       }
+        
+    }
+
+
+    
+  
 
   
 nav a{
