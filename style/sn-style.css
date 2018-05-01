@@ -86,6 +86,10 @@ a{
     .sn-sidebar-nav{
         grid-area: sidebarNav;        
     }
+
+    .sn-sidebar-nav ul {
+        list-style: none;
+    }
     
 }
 
@@ -252,5 +256,7 @@ a{
         grid-area: sidebarNav;        
     }
 
-
+    .sn-sidebar-nav ul {
+        list-style: none;
+    }
 }
