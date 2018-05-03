@@ -20,6 +20,7 @@ a{
         "sidebar footer footer";
         grid-template-columns: 1fr 2fr 2fr;
         grid-template-rows: 50px 3fr 50px;
+        height:100%;
        
      }
     
@@ -89,8 +90,12 @@ a{
         grid-area: sidebarNav;        
     }
 
-    .sn-sidebar-nav ul {
+    .sn-sidebar-nav ul li{
         list-style: none;
+        border:1px solid white;
+        border-radius: 0.5em;
+        padding:0.2em;
+        margin:0.2em;   
     }
     
 }
@@ -105,7 +110,7 @@ a{
         "sidebar sidebar sidebar"
         "footer footer footer";
         grid-template-columns: 1fr 2fr 2fr;
-        grid-template-rows: 50px auto 3fr 50px;
+        grid-template-rows: 85px auto 3fr 50px;
         height: 100%;
      }
     
@@ -119,7 +124,7 @@ a{
         grid-template-areas:
          "headerMain"
          "headerSub";
-         grid-template-rows: 3fr auto;
+         grid-template-rows: 3fr 2fr;
     }
     
     code{
@@ -132,6 +137,11 @@ a{
     }
 
     .sn-header-sub{ grid-area: "headerSub"}
+    .sn-header-sub a {
+        border:1px solid;
+        border-radius: 0.5em;
+        padding:0.2em;
+        margin:0.2em;  }
     
     
     .sn-sidebar {
@@ -166,20 +176,27 @@ a{
     
     .sn-sidebar-nav{
         grid-area: sidebarNav;  
-        margin: auto auto;      
+        margin: 0;
+        padding:0;      
     }
 
     .sn-sidebar-nav ul li{
-        display: inline;     
+        display: inline; 
+        border:1px solid white;
+        border-radius: 0.5em;
+        padding:0.2em;
+        margin:0.2em;    
     }
 
+
+    
 
 }
 
 
 
 /*Landscape View*/
-@media only screen  and (orientation : landscape){
+@media only screen   and (orientation : landscape){
 
     .sn-grid-template{
         display: grid;
@@ -188,7 +205,7 @@ a{
         "sidebar content content"
         "sidebar footer footer";
         grid-template-columns: 1fr 2fr 2fr;
-        grid-template-rows: 50px 3fr 50px;
+        grid-template-rows: 85px 3fr 50px;
         height: 100%;
      }
     
@@ -202,7 +219,7 @@ a{
         grid-template-areas:
          "headerMain"
          "headerSub";
-         grid-template-rows: 3fr auto;
+         grid-template-rows: 3fr 2fr;
          animation-name: headerIn;
         animation-duration: 500ms;
      
@@ -214,12 +231,18 @@ a{
     
 
     .sn-header-main{
-        grid-area: "headerMain"
+        grid-area: "headerMain";
+       
         
         
     }
 
     .sn-header-sub{ grid-area: "headerSub"}
+    .sn-header-sub a {
+        border:1px solid;
+        border-radius: 0.5em;
+        padding:0.2em;
+        margin:0.2em;  }
     
     
     .sn-sidebar {
