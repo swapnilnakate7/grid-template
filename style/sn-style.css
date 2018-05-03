@@ -1,10 +1,11 @@
 body{
-    background: #FFF8E1;
+    background-color: #ecf0f1;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+    margin:0;  
+    overflow: hidden;
 }
+
 a{
-    margin-right: 1rem;
     text-decoration: none;
     color: #FFF8E1;
 }
@@ -19,12 +20,12 @@ a{
         "sidebar footer footer";
         grid-template-columns: 1fr 2fr 2fr;
         grid-template-rows: 50px 3fr 50px;
-        height: 100%;
+       
      }
     
     .sn-header{
         grid-area: header;
-        background: #9C27B0;
+        background: #3498db;
         text-align: center;
         height: 100%;
         
@@ -33,6 +34,7 @@ a{
          "headerMain"
          "headerSub";
          grid-template-rows: 3fr auto;
+        
     }
     
     code{
@@ -51,7 +53,7 @@ a{
     
     .sn-sidebar {
     grid-area: sidebar;
-    background-color: #757575;
+    background-color: #2c3e50;
     /*sidebar grid*/
     display: grid;
     grid-template-areas: 
@@ -68,7 +70,7 @@ a{
     
     .sn-footer{
     grid-area: footer;
-    background: #9C27B0;
+    background: #2ecc71;
     text-align: center;
     padding: 0.5rem;
     color: #FFF8E1;
@@ -109,7 +111,7 @@ a{
     
     .sn-header{
         grid-area: header;
-        background: #9C27B0;
+        background: #3498db;
         text-align: center;
         height: 100%;
         
@@ -134,7 +136,7 @@ a{
     
     .sn-sidebar {
     grid-area: sidebar;
-    background-color: #757575;
+    background-color: #2c3e50;
     /*sidebar grid*/
     display: grid;
     grid-template-areas: 
@@ -150,7 +152,7 @@ a{
     
     .sn-footer{
     grid-area: footer;
-    background: #9C27B0;
+    background: #2ecc71;
     text-align: center;
     padding: 0.5rem;
     color: #FFF8E1;
@@ -192,7 +194,7 @@ a{
     
     .sn-header{
         grid-area: header;
-        background: #9C27B0;
+        background: #3498db;
         text-align: center;
         height: 100%;
         
@@ -201,6 +203,9 @@ a{
          "headerMain"
          "headerSub";
          grid-template-rows: 3fr auto;
+         animation-name: headerIn;
+        animation-duration: 500ms;
+     
     }
     
     code{
@@ -219,7 +224,7 @@ a{
     
     .sn-sidebar {
     grid-area: sidebar;
-    background-color: #757575;
+    background-color: #2c3e50;
     /*sidebar grid*/
     display: grid;
     grid-template-areas: 
@@ -227,6 +232,8 @@ a{
     "sidebarNav";
     grid-template-rows: 150px 80%;
     grid-template-columns: 100%;
+    animation-name: sidebarIn;
+    animation-duration: 500ms;
     }
     
     .sn-main{
@@ -236,10 +243,12 @@ a{
     
     .sn-footer{
     grid-area: footer;
-    background: #9C27B0;
+    background: #2ecc71;
     text-align: center;
     padding: 0.5rem;
     color: #FFF8E1;
+    animation-name: footerIn;
+    animation-duration: 5000ms;
     }
     
     .sn-sidebar-logo{
@@ -251,10 +260,38 @@ a{
     }
     
     .sn-sidebar-nav{
-        grid-area: sidebarNav;        
+        grid-area: sidebarNav;       
     }
 
     .sn-sidebar-nav ul {
         list-style: none;
+        margin-left:0;
+        padding:0.2em;
     }
+
+    .sn-sidebar-nav ul li{
+        text-align: center;
+        border:1px groove white;
+        border-radius:0.5em;
+        padding:0.3em;
+        margin:0.5em;
+        width:auto;
+
+
+    }
+}
+
+@keyframes headerIn {
+    0% {transition: 50ms; height: 0%}
+    100% {transition: 25ms; height: 100%}
+}
+
+@keyframes footerIn {
+    0% {visibility: hidden;}
+    100% {visibility: unset;}
+}
+
+@keyframes sidebarIn {
+    0% {transition: 50ms; width: 0%}
+    100% {transition: 25ms; width: 100%}
 }
